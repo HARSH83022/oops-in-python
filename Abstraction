@@ -1,0 +1,21 @@
+from abc import ABC, abstractmethod
+
+class BankApp(ABC):  # Make BankApp inherit from ABC
+    def database(self):
+        print("connected to database")
+
+    @abstractmethod
+    def security(self):
+        pass
+
+class MobileApp(BankApp):
+    def mobile_login(self):
+        print("login to mobile phone")
+
+    def security(self):  # Implement the security method
+        print("security for mobile app")
+
+mob = MobileApp()
+mob.database()  # connected to database
+mob.mobile_login()  # login to mobile phone
+mob.security()  # security for mobile app
