@@ -1,0 +1,20 @@
+class ottsubscription:
+  def __init__(self, subscripition_id,plan, total_payment):  #method
+    self.id = subscripition_id    
+    self.plan= plan
+    self.payment = total_payment
+
+  def subscribe(self):
+    print(f"subscribe with {self.id} id is subscripted  to the {self.plan} plan total {self.payment} payment")
+
+  def unsubscribe(self):
+    print(f"subscribe with {self.id} id is unscribed to the {self.plan} plan total {self.payment} payment")  
+    
+#object
+netflix=ottsubscription(1222,"monthly", 100  ) #(argument)
+netflix.plan
+netflix.payment
+print(netflix.payment)
+print(netflix.plan)
+netflix.subscribe()
+netflix.unsubscribe()
